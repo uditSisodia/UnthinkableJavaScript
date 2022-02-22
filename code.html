@@ -1,0 +1,90 @@
+<script>
+
+    function funct1(times){return new Promise(function(resolve,reject){
+            setTimeout(() => {
+                document.write("funct1,");
+            },times);
+    
+            let ans=prompt("Please enter a value",100);
+            if(ans==100)
+            {
+                resolve("p1 executed successfully");
+            }
+            else
+            {
+                reject("File 1 not found");
+            }
+        
+        })};
+    
+    function funct2(times){ return new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                document.write("funct2,");
+            },times);
+    
+            let ans=prompt("Please enter value",100);
+    
+            if(ans==100)
+            {
+                resolve("p2 executed successfully");
+            }
+            else
+            {
+                reject("File 2 not found");
+            }
+    
+        })};
+    
+    function funct3(times){return new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                document.write("funct3,");
+            },times);
+    
+            let ans=prompt("Please enter value",100);
+    
+            if(ans==100)
+            {
+                resolve("p3 executed successfully");
+            }
+            else
+            {
+                reject("File 3 not found");
+            }
+            
+        })};
+    
+    function funct4(times){return new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                document.write("funct4,")
+            },times);
+    
+            let ans=prompt("Please enter value",100);
+    
+            if(ans==100)
+            {
+                resolve("p4 executed successfully");
+            }
+            else
+            {
+                reject("File 4 not found");
+            }
+    
+        })};
+    
+        funct1(1000).then(funct2(1000).then(()=>{alert("All program Started")}).catch((error)=>{alert(error);})).catch((error)=>{alert(error)});
+            
+        
+        
+        /*p4.then((value)=>{
+            console.log(value);
+        },
+        (error)=>{
+            console.log(error);
+        }
+        );*/
+    
+        /*Promise.all([p1,p2,p3,p4]).then((values)=>{
+            console.log(values);
+        });*/
+    
+    </script>
