@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #b1{
+            left:200px;
+            position: relative;   
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function fun1()
+        {
+            let a=document.getElementById('b1');
+            a.style.backgroundColor="#88B04B";
+        }
+        function fun2()
+        {
+            let b=document.getElementById('b1');
+            b.style.height="100px";
+            b.style.width="70px";
+        }
+        function fun3()
+        {
+            let c=document.getElementById('b1');
+            c.style.height="75px";
+            c.style.width="50px";
+            c.style.backgroundColor="#8a2be2";
+        }
+        function fun4()
+        {
+            let d=document.getElementById('i1');
+            d.style.backgroundColor="#88B04B";
+            d.style.borderStyle="solid";
+        }
+        function fun5()
+        {
+            alert("You have right click on the button !!");
+        }
+        function fun6()
+        {
+            let d=document.getElementById('b1');
+            d.style.borderStyle="dotted";
+            alert("You have double Clicked on element !!");
+        }
+        
+    </script>
+    <button style="background-color:#8a2be2;height: 75px; width: 50px;left: 400px; top:200px;font-size:80%;" id="b1" onclick="fun1()" onmouseover="fun2()" onmouseout="fun3()" oncontextmenu="fun5()" ondblclick="fun6()">myButton</button>
+    
+    <input type="text" onfocus="fun4()" id="i1">
+    
+</body>
+</html>
